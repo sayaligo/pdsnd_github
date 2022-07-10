@@ -183,7 +183,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-# Function if user wants to see additinal data lines
+# Function if user wants to see additional data lines
 def show_data (df):
     """5 rows in each pass"""
     print('press enter to see data, press no to skip')

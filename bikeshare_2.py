@@ -160,7 +160,10 @@ def user_stats(df):
     print(user_types)
 
 
-    # Display counts of gender and try clause in case gender is absent in filter
+    """try clause in case of gender absent in filter and 
+       in case of birth year column is absent in file."""
+   
+    # Display counts of gender
     try:
         gender = df['Gender'].value_counts()
         print(f"\nThe types of users by gender are given below:\n\n{gender}")
@@ -169,8 +172,6 @@ def user_stats(df):
 
 
     # Display earliest, most recent, and most common year of birth
-    #try clause in case Birth Year column is absent in file
-
     try:
         earliest = int(df['Birth Year'].min())
         recent = int(df['Birth Year'].max())

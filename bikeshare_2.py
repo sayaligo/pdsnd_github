@@ -170,7 +170,6 @@ def user_stats(df):
     except:
         print("\nThis file has no gender column.")
 
-
     # Display earliest, most recent, and most common year of birth
     try:
         earliest, recent, common_year = int(df['Birth Year'].min()), int(df['Birth Year'].max()), int(df['Birth Year'].mode()[0])

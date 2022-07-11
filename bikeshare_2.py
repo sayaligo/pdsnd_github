@@ -173,9 +173,7 @@ def user_stats(df):
 
     # Display earliest, most recent, and most common year of birth
     try:
-        earliest = int(df['Birth Year'].min())
-        recent = int(df['Birth Year'].max())
-        common_year = int(df['Birth Year'].mode()[0])
+        earliest, recent, common_year = int(df['Birth Year'].min()), int(df['Birth Year'].max()), int(df['Birth Year'].mode()[0])
         print(f"\nThe earliest year of birth: {earliest}\n\nThe most recent year of birth: {recent}\n\nThe most common year of birth: {common_year}")
     except:
         print("There are no birth year details in this file.")
